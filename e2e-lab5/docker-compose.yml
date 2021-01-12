@@ -1,27 +1,37 @@
 version: '3.4'
 
 services:
+  helpdesk_web:
+    ports:
+      83:80
+    image: ${DOCKER_REGISTRY-}helpdeskweb
+    build:
+      context: .
+      dockerfile: Helpdesk_Web/Dockerfile
+
+  hr_helpdesk:
+    ports:
+      -82:80
+    image: ${DOCKER_REGISTRY-}hrhelpdesk
+    build:
+      context: .
+      dockerfile: HR_Helpdesk/Dockerfile
+
+
   it_helpdesk:
     ports:
-        - 80:80
+      80:80
     image: ${DOCKER_REGISTRY-}ithelpdesk
     build:
       context: .
       dockerfile: IT_Helpdesk/Dockerfile
 
+
   maintenance_helpdesk:
     ports:
-        - 81:80
+      81:80
     image: ${DOCKER_REGISTRY-}maintenancehelpdesk
     build:
       context: .
       dockerfile: Maintenance_Helpdesk/Dockerfile
 
-
-  hr_helpdesk:
-    ports:
-        - 82:80
-    image: ${DOCKER_REGISTRY-}hrhelpdesk
-    build:
-      context: .
-      dockerfile: HR_Helpdesk/Dockerfile
