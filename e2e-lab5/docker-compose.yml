@@ -17,7 +17,6 @@ services:
       context: .
       dockerfile: Maintenance_Helpdesk/Dockerfile
 
-
   hr_helpdesk:
     ports:
         - 82:80
@@ -25,3 +24,11 @@ services:
     build:
       context: .
       dockerfile: HR_Helpdesk/Dockerfile
+
+  helpdesk_web:
+    ports:
+        - 84:80
+    image: ${DOCKER_REGISTRY-}helpdeskweb
+    build:
+        context: .
+        dockerfile: Helpdesk_Web/Dockerfile
