@@ -30,5 +30,5 @@ services:
         - 84:80
     image: ${DOCKER_REGISTRY-}helpdeskweb
     build:
-        context: .
-        dockerfile: Helpdesk_Web/Dockerfile
+        context: Helpdesk_Web
+        dockerfile: Dockerfile
