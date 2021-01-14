@@ -3,7 +3,7 @@ version: '3.4'
 services:
   it_helpdesk:
     ports:
-        - 80:80
+        - 83:80
     image: ${DOCKER_REGISTRY-}ithelpdesk
     build:
       context: .
@@ -27,7 +27,7 @@ services:
 
   helpdesk_web:
     ports:
-        - 84:80
+        - 80:80
     image: ${DOCKER_REGISTRY-}helpdeskweb
     build:
         context: Helpdesk_Web
