@@ -20,6 +20,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpdesk_Web", "Helpdesk_We
 		Helpdesk_Web\style.css = Helpdesk_Web\style.css
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "e2eTests", "e2eTests", "{DA773DE7-CFA7-4D5F-9C5F-2169AD97895D}"
+	ProjectSection(SolutionItems) = preProject
+		Helpdesk_Web\cypress\integration\helpdeskTest.spec.js = Helpdesk_Web\cypress\integration\helpdeskTest.spec.js
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +50,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DA773DE7-CFA7-4D5F-9C5F-2169AD97895D} = {03091833-BABB-4CEF-BF8B-43D7BDFF2386}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8A0CA43A-9EA1-4569-9323-54409C71C2BB}

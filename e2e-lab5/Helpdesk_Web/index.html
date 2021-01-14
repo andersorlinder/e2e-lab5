@@ -1,4 +1,4 @@
-<html lang="en">
+﻿<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +25,7 @@
                     <input type="text" name="name" id="name" required />
                     <br>
                     <label for="phoneNumber">Phone number</label>
-                    <input type="text" name="phoneNumber" id="phoneNumber" required />
+                    <input type="tel" name="phoneNumber" id="phoneNumber" required />
                     <br>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" required />
@@ -33,7 +33,7 @@
                     <label for="description">Description</label>
                     <textarea name="description" id="description" rows="5" cols="23" required ></textarea>
                     <br><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="ITSubmit">Submit</button>
                     <p class="status"></p>
                 </form>
             </div>
@@ -41,13 +41,13 @@
                 <h2>Maintenance Helpdesk</h2>
                 <form id="MaintenanceHelpdeskForm">
                     <label for="type">Type</label>
-                    <select id="type" name="type">
+                    <select name="type">
                         <option value="fault">Fault report</option>
                         <option value="entrance">Entrance Permission</option>
                     </select>
                     <br>
                     <label for="priority">Priority</label>
-                    <select id="priority" name="priority">
+                    <select name="priority">
                         <option value="1">Critical</option>
                         <option value="2">High</option>
                         <option value="3">Standard</option>
@@ -55,21 +55,21 @@
                     </select>
                     <br>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
+                    <input type="text" name="name" required />
                     <br>
                     <label for="phoneNumber">Phone number</label>
-                    <input type="string" name="phoneNumber" id="phoneNumber" required />
+                    <input type="tel" name="phoneNumber" required />
                     <br>
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" required />
                     <br>
                     <label for="roomNumber">Room number</label>
-                    <input type="number" name="roomNumber" id="roomNumber" required />
+                    <input type="number" name="roomNumber" required />
                     <br>
                     <label for="description">Description</label>
-                    <textarea name="description" id="description" rows="5" cols="23" required></textarea>
+                    <textarea name="description" rows="5" cols="23" required></textarea>
                     <br><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="MaintenanceSubmit">Submit</button>
                     <p class="status"></p>
                 </form>
             </div>
@@ -90,7 +90,7 @@
                     <input type="number" name="employmentNumber" id="employmentNumber" required />
                     <br>
                     <label for="phoneNumber">Phone number</label>
-                    <input type="string" name="phoneNumber" id="phoneNumber" required />
+                    <input type="tel" name="phoneNumber" id="phoneNumber" required />
                     <br>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" required />
@@ -101,7 +101,7 @@
                     <label for="description">Description</label>
                     <textarea name="description" id="description" rows="5" cols="23" required ></textarea>
                     <br><br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" id="HRSubmit">Submit</button>
                     <p class="status"></p>
                 </form>
             </div>
