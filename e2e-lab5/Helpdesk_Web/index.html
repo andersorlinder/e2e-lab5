@@ -1,111 +1,121 @@
 ﻿<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ITHS Helpdesk</title>
-        <link rel="stylesheet" href="style.css">
-        
-    </head>
-    <body>
-        <header><h1>ITHS Helpdesk</h1></header>
-        <div class="HelpdeskContainer">
-            <div class="HelpdeskForm">
-                <h2>IT Helpdesk</h2>
-                <form id="ITHelpdeskForm">
-                    <label for="type">Type</label>
-                    <select id="type" name="type">
-                        <option value="fault">Fault report</option>
-                        <option value="account">Account issues</option>
-                    </select>
-                    <br>
-                    <label for="product">Product or System</label>
-                    <input type="text" name="product" id="product" required />
-                    <br>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
-                    <br>
-                    <label for="phoneNumber">Phone number</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" required />
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
-                    <br>
-                    <label for="description">Description</label>
-                    <textarea name="description" id="description" rows="5" cols="23" required ></textarea>
-                    <br><br>
-                    <button type="submit" id="ITSubmit">Submit</button>
-                    <p class="status"></p>
-                </form>
-            </div>
-            <div class="HelpdeskForm">
-                <h2>Maintenance Helpdesk</h2>
-                <form id="MaintenanceHelpdeskForm">
-                    <label for="type">Type</label>
-                    <select name="type">
-                        <option value="fault">Fault report</option>
-                        <option value="entrance">Entrance Permission</option>
-                    </select>
-                    <br>
-                    <label for="priority">Priority</label>
-                    <select name="priority">
-                        <option value="1">Critical</option>
-                        <option value="2">High</option>
-                        <option value="3">Standard</option>
-                        <option value="4">Low</option>
-                    </select>
-                    <br>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" required />
-                    <br>
-                    <label for="phoneNumber">Phone number</label>
-                    <input type="tel" name="phoneNumber" required />
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" required />
-                    <br>
-                    <label for="roomNumber">Room number</label>
-                    <input type="number" name="roomNumber" required />
-                    <br>
-                    <label for="description">Description</label>
-                    <textarea name="description" rows="5" cols="23" required></textarea>
-                    <br><br>
-                    <button type="submit" id="MaintenanceSubmit">Submit</button>
-                    <p class="status"></p>
-                </form>
-            </div>
-            <div class="HelpdeskForm">
-                <h2>HR Helpdesk</h2>
-                <form id="HRHelpdeskForm">
-                    <label for="type">Type</label>
-                    <select id="type" name="type">
-                        <option value="education">Education</option>
-                        <option value="employment">Employment</option>
-                        <option value="enviroment">Work Enviroment</option>
-                    </select>
-                    <br>
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
-                    <br>
-                    <label for="employmentNumber">Employment number</label>
-                    <input type="number" name="employmentNumber" id="employmentNumber" required />
-                    <br>
-                    <label for="phoneNumber">Phone number</label>
-                    <input type="tel" name="phoneNumber" id="phoneNumber" required />
-                    <br>
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
-                    <br>
-                    <label for="chief">Chief</label>
-                    <input type="text" name="chief" id="chief" required />
-                    <br>
-                    <label for="description">Description</label>
-                    <textarea name="description" id="description" rows="5" cols="23" required ></textarea>
-                    <br><br>
-                    <button type="submit" id="HRSubmit">Submit</button>
-                    <p class="status"></p>
-                </form>
-            </div>
-        </div>
-    </body>
-    <script type="text/javascript" src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ITHS Helpdesk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header><h1>ITHS Helpdesk</h1></header>
+    <div class="HelpdeskContainer">
+      <div class="HelpdeskForm">
+        <h2>IT Helpdesk</h2>
+        <form id="ITHelpdeskForm">
+          <label for="type">Type</label>
+          <select name="type">
+            <option value="fault">Fault report</option>
+            <option value="account">Account issues</option>
+          </select>
+          <br />
+          <label for="product">Product or System</label>
+          <input type="text" name="product" required />
+          <br />
+          <label for="name">Name</label>
+          <input type="text" name="name" required />
+          <br />
+          <label for="phoneNumber">Phone number</label>
+          <input type="tel" name="phoneNumber" required />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+          <br />
+          <label for="description">Description</label>
+          <textarea name="description" rows="5" cols="23" required></textarea>
+          <br /><br />
+          <button type="submit">Submit</button>
+          <p class="status"></p>
+        </form>
+      </div>
+      <div class="HelpdeskForm">
+        <h2>Maintenance Helpdesk</h2>
+        <form id="MaintenanceHelpdeskForm">
+          <label for="type">Type</label>
+          <select name="type">
+            <option value="fault">Fault report</option>
+            <option value="entrance">Entrance Permission</option>
+          </select>
+          <br />
+          <label for="priority">Priority</label>
+          <select name="priority">
+            <option value="1">Critical</option>
+            <option value="2">High</option>
+            <option value="3">Standard</option>
+            <option value="4">Low</option>
+          </select>
+          <br />
+          <label for="name">Name</label>
+          <input type="text" name="name" required />
+          <br />
+          <label for="phoneNumber">Phone number</label>
+          <input type="tel" name="phoneNumber" required />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" name="email" required />
+          <br />
+          <label for="roomNumber">Room number</label>
+          <input type="number" name="roomNumber" required />
+          <br />
+          <label for="description">Description</label>
+          <textarea name="description" rows="5" cols="23" required></textarea>
+          <br /><br />
+          <button type="submit">Submit</button>
+          <p class="status"></p>
+        </form>
+      </div>
+      <div class="HelpdeskForm">
+        <h2>HR Helpdesk</h2>
+        <form id="HRHelpdeskForm">
+          <label for="type">Type</label>
+          <select  name="type">
+            <option value="education">Education</option>
+            <option value="employment">Employment</option>
+            <option value="enviroment">Work Enviroment</option>
+          </select>
+          <br />
+          <label for="name">Name</label>
+          <input type="text" name="name"  required />
+          <br />
+          <label for="employmentNumber">Employment number</label>
+          <input
+            type="number"
+            name="employmentNumber"
+            id="employmentNumber"
+            required
+          />
+          <br />
+          <label for="phoneNumber">Phone number</label>
+          <input type="tel" name="phoneNumber"  required />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" name="email"  required />
+          <br />
+          <label for="chief">Chief</label>
+          <input type="text" name="chief"  required />
+          <br />
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            rows="5"
+            cols="23"
+            required
+          ></textarea>
+          <br /><br />
+          <button type="submit" >Submit</button>
+          <p class="status"></p>
+        </form>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
 </html>
