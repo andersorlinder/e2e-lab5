@@ -11,6 +11,15 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HR_Helpdesk", "HR_Helpdesk\HR_Helpdesk.csproj", "{7EA3CDFD-5928-443B-ACCB-6F41E4807C6E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpdesk_Web", "Helpdesk_Web", "{03091833-BABB-4CEF-BF8B-43D7BDFF2386}"
+	ProjectSection(SolutionItems) = preProject
+		Helpdesk_Web\Dockerfile = Helpdesk_Web\Dockerfile
+		Helpdesk_Web\index.html = Helpdesk_Web\index.html
+		Helpdesk_Web\nginx.conf = Helpdesk_Web\nginx.conf
+		Helpdesk_Web\script.js = Helpdesk_Web\script.js
+		Helpdesk_Web\style.css = Helpdesk_Web\style.css
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
