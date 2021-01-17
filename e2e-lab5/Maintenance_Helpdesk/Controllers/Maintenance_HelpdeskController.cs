@@ -2,6 +2,7 @@
 using Maintenance_Helpdesk.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Maintenance_Helpdesk.Controllers
@@ -11,6 +12,7 @@ namespace Maintenance_Helpdesk.Controllers
     public class Maintenance_HelpdeskController : Controller
     {
         private Maintenance_HelpdeskDbContext context;
+        public record UndoParameters(string Name);
 
         public Maintenance_HelpdeskController(Maintenance_HelpdeskDbContext context)
         {
@@ -38,6 +40,24 @@ namespace Maintenance_Helpdesk.Controllers
                 return BadRequest();
             }
             return Ok();
+        }
+
+        [EnableCors("AllowAll")]
+        [HttpDelete]
+        [Route("undo")]
+        public async Task<IActionResult> UndoFrontendTests([FromBody] UndoParameters parameters)
+        {
+            var recordsToRemove = context.Maintenance_Helpdesk
+                .Where(r => r.Name == parameters.Name)
+                .ToArray();
+            var noRecordsWereFound = recordsToRemove.Length == 0;
+
+            if (noRecordsWereFound)
+                return NoContent();
+
+            context.Maintenance_Helpdesk.RemoveRange(recordsToRemove);
+            await context.SaveChangesAsync();
+            return NotFound();
         }
     }
 }
