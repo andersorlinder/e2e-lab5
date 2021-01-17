@@ -96,7 +96,7 @@ describe("Helpdesk e2e-tests", () => {
             { name: "[TEST]" }
         )
         .then((response) => {
-            expect(response.status).to.equal(200);
+            expect(response.status).to.equal(204);
         });
 
         cy.request(
@@ -105,7 +105,7 @@ describe("Helpdesk e2e-tests", () => {
             { name: "[TEST]" }
         )
         .then((response) => {
-            expect(response.status).to.equal(200);
+            expect(response.status).to.equal(204);
         });
 
         cy.request(
@@ -114,7 +114,7 @@ describe("Helpdesk e2e-tests", () => {
             { name: "[TEST]" }
         )
         .then((response) => {
-            expect(response.status).to.equal(200);
+            expect(response.status).to.equal(204);
         });
     });
 });
