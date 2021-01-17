@@ -12,7 +12,7 @@ namespace IT_Helpdesk.Controllers
     public class IT_HelpdeskController : Controller
     {
         private IT_HelpdeskDbContext context;
-        public record UndoParameters(string Name);
+        public record UndoParameters(string name);
 
         public IT_HelpdeskController(IT_HelpdeskDbContext context)
         {
@@ -47,16 +47,15 @@ namespace IT_Helpdesk.Controllers
         public async Task<IActionResult> UndoFrontendTests([FromBody] UndoParameters parameters)
         {
             var recordsToRemove = context.IT_Helpdesk
-                .Where(r => r.Name == parameters.Name)
+                .Where(r => r.Name == parameters.name)
                 .ToArray();
-            var noRecordsWereFound = recordsToRemove.Length == 0;
 
-            if (noRecordsWereFound)
+            if (recordsToRemove.Length == 0)
                 return NoContent();
 
             context.IT_Helpdesk.RemoveRange(recordsToRemove);
             await context.SaveChangesAsync();
-            return NotFound();
+            return Ok();
         }
     }
 }
