@@ -51,11 +51,11 @@ namespace HR_Helpdesk.Controllers
                 .ToArray();
 
             if (recordsToRemove.Length == 0)
-                return NoContent();
+                return NotFound();
 
             context.HR_Helpdesk.RemoveRange(recordsToRemove);
             await context.SaveChangesAsync();
-            return Ok();
+            return NoContent();
         }
     }
 }
